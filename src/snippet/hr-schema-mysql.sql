@@ -4,6 +4,8 @@
 * 
 * @Author: Andrei N. CIOBANU
 */
+CREATE DATABASE hr;
+
 USE hr;
 
 /* *************************************************************** 
