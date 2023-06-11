@@ -4,12 +4,6 @@
 * 
 * @Author: Andrei N. CIOBANU
 */
-
-DROP SCHEMA
-
-IF EXISTS hr;
-	CREATE SCHEMA hr COLLATE = utf8_general_ci;
-
 USE hr;
 
 /* *************************************************************** 
