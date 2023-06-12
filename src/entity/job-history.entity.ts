@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity({ name: 'job_history' })
-export class JobHistoryEntity {
+export class JobHistory {
   @PrimaryColumn()
   employee_id: number;
 

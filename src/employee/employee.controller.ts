@@ -1,16 +1,16 @@
 import { Controller, Get, NotFoundException, Param } from '@nestjs/common';
 import { EmployeeService } from './employee.service';
-import { EmployeeEntity } from '../entity/employee.entity';
+import { Employee } from '../entity/employee.entity';
 
 @Controller('employees')
 export class EmployeeController {
   constructor(private employeeService: EmployeeService) {}
 
   @Get('profile/:id')
-  async findOne(@Param('id') id: number): Promise<EmployeeEntity> {
+  async findOne(@Param('id') id: number): Promise<Employee> {
     const employee = await this.employeeService.findOne(id);
     if (!employee) {
-      throw new NotFoundException("EmployeeEntity doesn't exist");
+      throw new NotFoundException("Employee doesn't exist");
     } else {
       return employee;
     }

@@ -1,11 +1,10 @@
 import { DataSource } from 'typeorm';
-import { EmployeeEntity } from '../entity/employee.entity';
+import { Employee } from '../entity/employee.entity';
 
 export const employeeProviders = [
   {
     provide: 'EMPLOYEE_REPOSITORY',
-    useFactory: (dataSource: DataSource) =>
-      dataSource.getRepository(EmployeeEntity),
+    useFactory: (dataSource: DataSource) => dataSource.getRepository(Employee),
     inject: ['DATA_SOURCE'],
   },
 ];
