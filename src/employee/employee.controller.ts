@@ -6,13 +6,13 @@ import { EmployeeEntity } from '../entity/employee.entity';
 export class EmployeeController {
   constructor(private employeeService: EmployeeService) {}
 
-  @Get(':id')
-  async findOne(@Param('id') id: number): Promise<string> {
+  @Get('profile/:id')
+  async findOne(@Param('id') id: number): Promise<EmployeeEntity> {
     const employee = await this.employeeService.findOne(id);
     if (!employee) {
       throw new NotFoundException("EmployeeEntity doesn't exist");
     } else {
-      return employee.first_name;
+      return employee;
     }
   }
 
