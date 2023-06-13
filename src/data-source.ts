@@ -3,6 +3,7 @@ import { DataSource } from 'typeorm';
 import { Employee } from './entity/employee.entity';
 import { JobHistory } from './entity/job-history.entity';
 import { Department } from './entity/department.entity';
+import { Location } from './entity/location.entity';
 
 export const AppDataSource = new DataSource({
   type: 'mysql',
@@ -13,7 +14,7 @@ export const AppDataSource = new DataSource({
   database: 'hr',
   synchronize: false,
   logging: false,
-  entities: [Employee, JobHistory, Department],
+  entities: [Employee, JobHistory, Department, Location],
   migrations: [],
   subscribers: [],
 });
