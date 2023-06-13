@@ -6,7 +6,7 @@ import { Employee } from '../entity/employee.entity';
 export class EmployeeController {
   constructor(private employeeService: EmployeeService) {}
 
-  @Get('profile/:id')
+  @Get(':id')
   async findOne(@Param('id') id: number): Promise<Employee> {
     const employee = await this.employeeService.findOne(id);
     if (!employee) {
