@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Employee } from '../entity/employee.entity';
 import { Department } from '../entity/department.entity';
@@ -21,5 +21,9 @@ export class EmployeeService {
 
   async findAll(): Promise<Employee[]> {
     return this.employeeRepository.find();
+  }
+
+  async updateEmployee(id: number, employee: Employee) {
+    return await this.employeeRepository.update(id, employee);
   }
 }
