@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "f65d4225-6a3b-487f-9530-f0cf8d0f2720",
+		"name": "nest_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15094517"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/departments/raise/30",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"percentage\": 10 \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/departments/raise/30",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"departments",
+						"raise",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/employees/update/100",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employee_id\": 100,\n    \"first_name\": \"Han B\",\n    \"last_name\": \"Je-Gal\",\n    \"email\": \"jkhb717@gmail.com\",\n    \"phone_number\": \"010-8822-8547\",\n    \"hire_date\": \"1987-06-17\",\n    \"job_id\": \"AD_PRES\",\n    \"salary\": 30000,\n    \"commission_pct\": 0.30,\n    \"manager_id\": 102,\n    \"department_id\": 90\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/employees/update/100",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employees",
+						"update",
+						"100"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
