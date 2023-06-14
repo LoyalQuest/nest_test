@@ -35,6 +35,11 @@ $ npm install
 ## Running the app
 
 ```bash
+# database set up
+$ set MySQL with root / root 
+$ CREATE DATABASE hr;
+
+
 # development
 $ npm run start
 
